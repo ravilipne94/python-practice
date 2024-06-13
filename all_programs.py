@@ -2117,3 +2117,21 @@
 #     print("Valid")
 # else:
 #     print("Not valid")
+
+
+
+
+# def pairOf(lst):
+#     new = []
+#     while lst:
+#         num = lst.pop()
+#         diff = k - num
+#         if diff in lst:
+#             new.append((num, diff))
+
+#     return new
+
+# k = 12
+# lst = [1, 2, 5, 7, 8, 4, 10]
+# a = pairOf(lst)
+# print(a)
