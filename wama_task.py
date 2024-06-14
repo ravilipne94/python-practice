@@ -132,19 +132,54 @@ class LRUCache:
             self.order.remove(key)
         elif len(self.cache) >= self.capacity:   # check length of cache inside dict.
             LRU_key = self.order.pop(0)                   # Remove the old used element from .
-            del self.cache[LRU_key]
+            del self.cache[LRU_key]  # 2
         self.cache[key] = value   # add new key-value in cache
         self.order.append(key)    # append new key in order so we can find it is latest.
         print(self.cache)
-        print(self.order)
+        # print(self.order)
 
-cache = LRUCache(3)
+
+cache = LRUCache(4)
 cache.put(1, 'a')
 cache.put(2, 'b')
-print(cache.get(2)) 
-cache.put(5, 'e')
-cache.put(6, 'f')
-print(cache.get(3))
 cache.put(3, 'c')
-print(cache.get(2))
+cache.put(4, 'd')
+print(cache.get(4))
+print(cache.get(4))
+cache.put(5, 'e') 
+print(cache.get(3))
+cache.put(6, 'f') 
+
+
+
+# cache = LRUCache(3)
+# cache.put(1, 'a')
+# cache.put(2, 'b')
+# print(cache.get(2)) 
+# cache.put(5, 'e')
+# cache.put(6, 'f')
+# print(cache.get(3))
+# cache.put(3, 'c')
+# print(cache.get(2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
