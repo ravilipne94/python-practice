@@ -551,6 +551,45 @@
 #     print("No solution exists.")
 
 # ---------------------------------------------------------------
+
+class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+# class Solution:
+#     def maxPathSum(self, root):
+#         self.max_sum = float('-inf')
+
+#         def max_gain(node):
+#             if not node:
+#                 return 0
+#             left_gain = max(max_gain(node.left), 0)
+#             right_gain = max(max_gain(node.right), 0)
+#             self.max_sum = max(self.max_sum, node.val + left_gain + right_gain)
+#             return node.val + max(left_gain, right_gain)
+
+#         max_gain(root)
+#         return self.max_sum
+
+# def array_to_tree(arr):
+#     if not arr:
+#         return None
+#     nodes = [TreeNode(val) if val is not None else None for val in arr]
+#     for i in range(len(arr)):
+#         if i * 2 + 1 < len(arr):
+#             nodes[i].left = nodes[i * 2 + 1]
+#         if i * 2 + 2 < len(arr):
+#             nodes[i].right = nodes[i * 2 + 2]
+#     return nodes[0]
+
+# root = [-10, 9, 20, None, None, 15, 7]
+# solution = Solution()
+# print(solution.maxPathSum(array_to_tree(root))) 
+
+# ---------------------------------------------------------------
+
 # Replace char in string
 
 # s = "ravi si python developer"
@@ -2127,10 +2166,13 @@
 #         diff = k - num
 #         if diff in lst:
 #             new.append((num, diff))
-
 #     return new
 
 # k = 12
 # lst = [1, 2, 5, 7, 8, 4, 10]
 # a = pairOf(lst)
 # print(a)
+
+
+
+

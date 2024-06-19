@@ -112,44 +112,53 @@
 
 
 
-class LRUCache:
-
-    def __init__(self, capacity):
-        self.capacity = capacity
-        self.cache = {}
-        self.order = []
-
-    def get(self, key):
-        if key in self.cache:
-            self.order.remove(key)
-            self.order.append(key)  # to show key is recently updated.
-            return self.cache[key]
-        else:
-            return "Element not present"
-
-    def put(self, key, value):
-        if key in self.cache:    # same key is not allowed in dictionary so remove it..
-            self.order.remove(key)
-        elif len(self.cache) >= self.capacity:   # check length of cache inside dict.
-            LRU_key = self.order.pop(0)                   # Remove the old used element from .
-            del self.cache[LRU_key]  # 2
-        self.cache[key] = value   # add new key-value in cache
-        self.order.append(key)    # append new key in order so we can find it is latest.
-        print(self.cache)
-        # print(self.order)
 
 
-cache = LRUCache(4)
-cache.put(1, 'a')
-cache.put(2, 'b')
-cache.put(3, 'c')
-cache.put(4, 'd')
-print(cache.get(4))
-print(cache.get(4))
-cache.put(5, 'e') 
-print(cache.get(3))
-cache.put(6, 'f') 
 
+
+# class LRUCache:
+
+#     def __init__(self, capacity):
+#         self.capacity = capacity
+#         self.cache = {}
+#         self.order = []
+
+#     def get(self, key):
+#         if key in self.cache:
+#             self.order.remove(key)
+#             self.order.append(key)  # to show key is recently updated.
+#             return self.cache[key]
+#         else:
+#             return "Element not present"
+
+#     def put(self, key, value):
+#         if key in self.cache:    # same key is not allowed in dictionary so remove it..
+#             self.order.remove(key)
+#         elif len(self.cache) >= self.capacity:   # check length of cache inside dict.
+#             LRU_key = self.order.pop(0)                   # Remove the old used element from .
+#             del self.cache[LRU_key]  # 2
+#         self.cache[key] = value   # add new key-value in cache
+#         self.order.append(key)    # append new key in order so we can find it is latest.
+#         # print(self.order)
+
+#     def show(self):
+#         print(self.cache)
+
+
+# cache = LRUCache(4)
+# cache.put(1, 1) 
+# cache.put(2, 2)
+# cache.put(3, 3)
+# cache.put(4, 4)
+# # print(cache.get(3))
+# print(cache.get(2))
+# print(cache.get(1))
+# cache.put(5, 5) 
+# # cache.show()
+
+# # print(cache.get(2))
+# cache.put(6, 6) 
+# cache.show()
 
 
 # cache = LRUCache(3)
@@ -164,17 +173,7 @@ cache.put(6, 'f')
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+# ===================================================================================================
 
 
 
