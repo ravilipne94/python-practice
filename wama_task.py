@@ -112,10 +112,6 @@
 
 
 
-
-
-
-
 # class LRUCache:
 
 #     def __init__(self, capacity):
@@ -172,13 +168,43 @@
 # print(cache.get(2))
 
 
-
 # ===================================================================================================
 
 
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 
+# def buildOwnTree(nums, index):
+#     if index >= len(nums) or nums[index] is None:
+#         return None
 
+#     root = TreeNode(nums[index])
+#     root.left = buildOwnTree(nums, 2 * index + 1)
+#     root.right = buildOwnTree(nums, 2 * index + 2)
+#     return root
 
+# def maxPathSum(root):
+#     def maxSum(node):
+#         nonlocal max_sum   # we have to update this value in inside the function not in global.
+#         if not node:
+#             return 0
 
+#         left_sum = max(0, maxSum(node.left)) # it will take left value using node
+#         right_sum = max(0, maxSum(node.right)) # it will take right value using node
+#         max_sum = max(max_sum, node.val + left_sum + right_sum)
+#         return node.val + max(left_sum, right_sum)
 
+#     max_sum = float('-inf')
+#     maxSum(root)
+#     return max_sum
+
+# if __name__ == "__main__":
+#     # nums = [10, 5, -3, 3, 2, None, 11, 3, -2, None, 1]
+#     nums = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10]
+#     root = buildOwnTree(nums, 0)
+#     max_sum = maxPathSum(root)
+#     print("Max path sum -----", max_sum)
 
